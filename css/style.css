@@ -12,7 +12,7 @@
 
 body {
   min-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -20,8 +20,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   background-color: var(--white);
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -32,6 +30,30 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header-logo {
+position: absolute;
+width: 138px;
+height: 70px;
+left: 600px;
+top: 0px;
 }
 
 .main-picture {
@@ -48,6 +70,11 @@ img {
   padding-right: 371.96px;
 }
 
+.frame {
+  position: absolute;
+  transform: translateY(-66px);
+}
+
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
@@ -57,7 +84,14 @@ img {
 }
 
 .site-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   list-style: none;
+}
+
+.site-navigation:last-child {
+  margin-right: 33px;
 }
 
 
@@ -76,7 +110,10 @@ img {
 }
 
 .features-list {
+  height: 330px;
   list-style: none;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
 }
 
 .feature-item h3 {
@@ -95,8 +132,17 @@ img {
 .reasons h2 {
   font-weight: bold;
   font-size: 21px;
+  padding-bottom: 16.5px;;
 }
-.reason {
+
+.block {
+  height: 216px;
+  padding-top: 42.5px;
+}
+
+.reason-1 {
+  display: grid;
+  grid-template-columns: 400px 800px;
   background-color: var(--blue);
   font-style: normal;
   font-weight: normal;
@@ -104,6 +150,26 @@ img {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  color: var(--white);
+}
+
+.reason-2 {
+  display: grid;
+  grid-template-columns: 800px 400px;
+  background-color: var(--blue);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-around;
 }
 
 .reason-list {
@@ -112,6 +178,8 @@ img {
 
 .reasons-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
 }
 
 .booking {
@@ -139,8 +207,23 @@ img {
   opacity: 0.3;
 }
 
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contacts {
+  justify-self: center;
+}
+
 .social-items {
+  display: flex;
   list-style: none;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
 }
 
 .social-item {
@@ -148,6 +231,7 @@ img {
   height: 48px;
   background-color: var(--blue);
   color: #766357;
+  margin: auto;
 }
 
 .footer-copyright {
@@ -157,15 +241,19 @@ img {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+  justify-content: center;
 }
 
 /* Cтраница каталога */
 
 .filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 58px 159px;
   color: var(--white);
+  background-image: url(../img/background.png);
   background-color: var(--black);
 }
-
 .filter-list {
   list-style: none;
 }
