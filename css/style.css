@@ -36,6 +36,10 @@ img {
   height: 100%;
 }
 
+.active {
+  color: var(--brown)
+}
+
 .page-body {
   min-height: 100%;
   display: grid;
@@ -46,14 +50,16 @@ img {
 .container {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .main-header-logo {
-position: absolute;
-width: 138px;
-height: 70px;
-left: 600px;
-top: 0px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 138px;
+  height: 70px;
+  left: 600px;
+  top: 0px;
 }
 
 .main-picture {
@@ -61,13 +67,12 @@ top: 0px;
   background-color: var(--grey);
   width: 1200px;
   height: 509px;
+  display: flex;
+  justify-content: center;
 }
 
-.sedona-text {
-  padding-top: 77.35px;
-  padding-bottom: 80.76px;
-  padding-left: 371.38px;
-  padding-right: 371.96px;
+.main-picture:: after {
+  background-image: url(../img/Shape.svg);
 }
 
 .frame {
@@ -88,14 +93,14 @@ top: 0px;
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
-}
-
-.site-navigation:last-child {
-  margin-right: 33px;
+  padding: 0 72px;
+  margin: 0;
 }
 
 
 .site-navigation a {
+  display: block;
+  padding: 15px 0;
   color: var(--black);
 }
 
@@ -110,10 +115,12 @@ top: 0px;
 }
 
 .features-list {
-  height: 330px;
   list-style: none;
   display: grid;
   grid-template-columns: 400px 400px 400px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .feature-item h3 {
@@ -169,7 +176,7 @@ top: 0px;
 .box {
   display: flex;
   flex-direction: column;
-  justify-items: space-around;
+  justify-content: space-around;
 }
 
 .reason-list {
@@ -180,6 +187,8 @@ top: 0px;
   list-style: none;
   display: grid;
   grid-template-columns: 400px 400px 400px;
+  padding: 0;
+  margin: 0;
 }
 
 .booking {
@@ -211,6 +220,7 @@ top: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background: rgba(255, 255, 255, 0.9);
+  align-items: center;
 }
 
 .footer-contacts {
@@ -221,17 +231,16 @@ top: 0px;
   display: flex;
   list-style: none;
   justify-content: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
 }
 
-.social-item {
+.social-item a {
+  display: flex;
+  justify-content: center;
   width: 46px;
   height: 48px;
   background-color: var(--blue);
   color: #766357;
-  margin: auto;
+  margin: 6px;
 }
 
 .footer-copyright {
@@ -242,6 +251,14 @@ top: 0px;
   text-align: center;
   text-transform: uppercase;
   justify-content: center;
+}
+
+.footer-copyright p {
+  display: flex;
+  align-items: center;
+}
+.academy {
+  padding-left: 8px;
 }
 
 /* Cтраница каталога */
