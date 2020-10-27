@@ -92,9 +92,9 @@
         <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button class="form-header">Поиск гостиницы в седоне</button>
       </section>
-      <form class="hotel-search">
+      <form class="hotel-search" action="https://echo.htmlacademy.ru/">
         <div class="date-area"><label for="check-in">дата заезда:</label>
-          <textarea class="form-date" id="check-in" name="check-in" placeholder="24 апреля 2017" required></textarea>
+          <input type="text" class="form-date" id="check-in" name="check-in" placeholder="24 апреля 2017" required>
           <div class="calendar form-icon"><svg width="21" height="23" viewBox="0 0 21 23" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -106,7 +106,7 @@
             </svg></div>
         </div>
         <div class="date-area"><label for="check-out">дата выезда:</label>
-          <textarea class="form-date" id="check-out" name="check-out" placeholder="4 июля 2017" required></textarea>
+          <input type="text" class="form-date" id="check-out" name="check-out" placeholder="4 июля 2017" required>
           <div class="calendar form-icon"><svg width="21" height="23" viewBox="0 0 21 23" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -119,7 +119,7 @@
         </div>
         <div class="form-people">
           <div class="form-adults"><label for="adults">Взрослые:</label>
-            <div class="form-block"><textarea class="form-number" id="adults" name="adults" required>2</textarea>
+            <div class="form-block"><input type="text" class="form-number" id="adults" name="adults" placeholder="2" required>
               <svg class="minus form-icon" width="12" height="3" viewBox="0 0 12 3" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="12" height="3" fill="#A9A9A9" /></svg>
@@ -131,7 +131,7 @@
               </svg></div>
           </div>
           <div class="form-children"><label for="kids">Дети:</label>
-            <div class="form-block"><textarea class="form-number" id="kids" name="kids" required>0</textarea>
+            <div class="form-block"><input type="text" class="form-number" id="kids" name="kids" placeholder="0" required>
               <svg class="minus form-icon" width="12" height="3" viewBox="0 0 12 3" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="12" height="3" fill="#A9A9A9" /></svg>
@@ -189,6 +189,7 @@
       </section>
     </footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

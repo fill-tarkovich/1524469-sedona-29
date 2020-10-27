@@ -102,18 +102,22 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
+  padding: 0;
+  margin-left: 73px;
   text-align: left;
 }
 
 .site-navigation :nth-child(3) {
   text-align: right;
+  margin-left: 148px;
 }
 
 .site-navigation :nth-child(4) {
   text-align: right;
+  margin-right: 11px;
 }
 
 .site-navigation .active {
@@ -124,7 +128,7 @@ img {
   padding: 15px 0;
   display: block;
   color: var(--black);
-  width: 264px;
+  width: 227px;
 }
 
 .site-navigation a:hover {
@@ -378,7 +382,7 @@ img {
   resize: none;
 }
 
-.form-date::placeholder {
+.form-date::placeholder, .form-number::placeholder {
   color: var(--black);
   opacity: 1;
 }
@@ -602,9 +606,9 @@ img {
 }
 
 .check_input {
-  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   position: absolute;
 }
 
@@ -701,7 +705,7 @@ img {
   width: 313px;
   height: 32px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   border: 2px solid var(--white);
 }
@@ -716,19 +720,31 @@ img {
   background-color: var(--white);
 }
 
-.price-controls textarea {
+.price-number {
   font-family: inherit;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   height: 21px;
-  width: 83px;
+  width: 32px;
   color: var(--white);
   background: transparent;
   border: none;
-  text-align: center;
+  text-align: left;
   resize: none;
   text-transform: uppercase;
+  margin-left: 3px;
+}
+
+.price-start {
+  width: 58px;
+  margin-right: 88px;
+  margin-left: 64px;
+}
+
+.price-number::placeholder {
+  color: var(--white);
+  opacity: 1;
 }
 
 .section-top {
@@ -996,4 +1012,8 @@ img {
 .name:active {
   color: var(--black);
   opacity: 0.3;
+}
+
+.hidden {
+  display: none;
 }
