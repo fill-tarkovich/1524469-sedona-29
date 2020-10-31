@@ -63,6 +63,7 @@ img {
 
 .main-header-logo {
   position: absolute;
+  z-index: 1;
   transform: translateX(-50%);
   width: 138px;
   height: 70px;
@@ -71,6 +72,7 @@ img {
 }
 
 .main-picture {
+  position: relative;
   background-image: url(../img/background\ photo.jpg);
   background-color: var(--grey);
   width: 1200px;
@@ -84,13 +86,13 @@ img {
   content: "";
   height: 57px;
   width: 1200px;
-  top: 508px;
+  top: 452px;
   background-image: url(../img/Shape.svg);
   background-repeat: no-repeat;
 }
 
 .main-navigation {
-  height: 56px;
+  min-height: 56px;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-white);
@@ -110,12 +112,12 @@ img {
   text-align: left;
 }
 
-.site-navigation :nth-child(3) {
+.site-navigation :nth-child(3n) {
   text-align: right;
   margin-left: 148px;
 }
 
-.site-navigation :nth-child(4) {
+.site-navigation :nth-child(4n) {
   text-align: right;
   margin-right: 11px;
 }
@@ -142,7 +144,7 @@ img {
 }
 
 .features {
-  height: 330px;
+  min-height: 330px;
 }
 
 .features-list {
@@ -194,7 +196,7 @@ img {
 }
 
 .block {
-  height: 189px;
+  min-height: 189px;
   padding-top: 27px;
 }
 
@@ -378,13 +380,15 @@ img {
   line-height: 26px;
   text-transform: uppercase;
   padding-left: 12px;
-  padding-top: 8px;
+  padding-top: 2px;
+  padding-bottom: 6px;
   resize: none;
 }
 
 .form-date::placeholder, .form-number::placeholder {
   color: var(--black);
   opacity: 1;
+  padding-left: 2px;
 }
 
 .form-people {
@@ -634,6 +638,10 @@ img {
   background-image: url(../img/checked-disabled.svg);
 }
 
+.check_input:focus+.check {
+  outline: dodgerblue;
+}
+
 .filter-block p {
   font-size: 16px;
   line-height: 21px;
@@ -702,6 +710,7 @@ img {
 }
 
 .price-controls {
+  position: relative;
   width: 313px;
   height: 32px;
   display: flex;
@@ -713,8 +722,8 @@ img {
 .price-controls::before {
   content: "";
   position: absolute;
-  left: 969px;
-  top: 121px;
+  left: 156px;
+  top: 4px;
   width: 2px;
   height: 22px;
   background-color: var(--white);
