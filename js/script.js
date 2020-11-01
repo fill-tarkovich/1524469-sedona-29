@@ -4,16 +4,16 @@ let date = form.querySelectorAll(".form-date");
 let number = form.querySelectorAll(".form-number");
 let search = form.querySelector(".search-button");
 
-form.classList.add ("hidden");
+form.classList.add("hidden");
 
-btn.addEventListener ("click", function(evt){
-  evt.preventDefault();
-  form.classList.toggle ("hidden");
+btn.addEventListener("click", function () {
+  form.classList.toggle("hidden");
 })
 
-search.addEventListener ("click", function(evt) {
+search.addEventListener("click", function (evt) {
   if (!date.value || !number.value) {
-    evt.preventDefault();
     form.classList.add("required")
+  } else {
+    form.classList.remove("required")
   }
 })
