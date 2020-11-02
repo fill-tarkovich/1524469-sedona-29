@@ -817,7 +817,7 @@ img {
 }
 
 .check_input:focus+.check-box {
-  outline: auto;
+  outline: 2px var(--white) solid;
 }
 
 .filter-block p {
