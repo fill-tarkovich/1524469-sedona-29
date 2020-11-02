@@ -10,11 +10,14 @@ map.classList.remove("hidden");
 form.classList.add("bounce");
 
 btn.addEventListener("click", function () {
-  form.classList.remove("required");
+  form.classList.remove("required")
   form.classList.toggle("hidden");
 })
 
-search.onclick = function() {
+search.addEventListener("click", function (evt) {
   if (!date.value || !number.value) {
-    form.сlassList.add("required");}
+    form.classList.add("required")
+  } else {
+    form.classList.remove("required")
   }
+})
