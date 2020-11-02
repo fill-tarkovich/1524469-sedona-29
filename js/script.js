@@ -16,8 +16,8 @@ btn.addEventListener("click", function () {
 
 search.addEventListener("click", function (evt) {
   if (!date.value || !number.value) {
+    form.classList.remove("required");
+    form.offsetWidth = form.offsetWidth;
     form.classList.add("required")
-  } else {
-    form.classList.remove("required")
   }
 })

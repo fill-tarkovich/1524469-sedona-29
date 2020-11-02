@@ -192,7 +192,9 @@ img {
   -ms-flex-direction: column;
   flex-direction: column;
   -ms-flex-line-pack: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
@@ -236,10 +238,7 @@ img {
   padding-top: 27px;
 }
 
-.block p,
-.feature-item p,
-.reasons-item p,
-.card-middle p {
+.block p, .feature-item p, .reasons-item p, .card-middle p {
   color: var(--text-color);
 }
 
@@ -386,8 +385,12 @@ img {
 .form-map {
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form-header {
@@ -459,12 +462,18 @@ img {
 }
 
 .calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   width: 36px;
   height: 36px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   right: 0;
 }
 
@@ -545,7 +554,8 @@ img {
   position: relative;
   width: 179px;
   height: 38px;
-  line-height: 26px;;
+  line-height: 26px;
+  ;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,22 +583,33 @@ img {
 
 .plus {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 36px;
   height: 36px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   right: 0;
-
 }
 
 .minus {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 36px;
   height: 36px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   right: 78px;
 }
 
@@ -686,7 +707,7 @@ img {
   margin: 0;
 }
 
-.social-item a {
+.social-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -702,11 +723,11 @@ img {
   margin: 3px;
 }
 
-.social-item a:hover {
+.social-link:hover {
   background-color: var(--darker-blue);
 }
 
-.social-item > a:active path {
+.social-link:active path {
   background-color: var(--darkest-blue);
   fill: var(--grey-opacity-3);
 }
@@ -1010,7 +1031,7 @@ img {
   border-bottom: 1px dotted var(--blue);
 }
 
- .sorting-item > a.active{
+a.active-sorting {
   color: var(--blue);
   border: none;
 }
@@ -1294,39 +1315,84 @@ img {
   display: none;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translateY(-2000px)
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px)
   }
   70% {
-    transform: translateY(30px)
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px)
   }
   90% {
-    transform: translateY(-10px)
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
   }
   100% {
-    transform: translateY(0)
+    -webkit-transform: translateY(0);
+            transform: translateY(0)
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px)
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px)
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0)
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0)
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px)
   }
 }
 
 @keyframes shake {
   0%, 100% {
-    transform: translateX(0)
+    -webkit-transform: translateX(0);
+            transform: translateX(0)
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px)
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
   }
   20%, 40%, 60%, 80% {
-    transform: translateX(10px)
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px)
   }
 }
 
 .bounce {
-  animation-name: bounce;
-  animation-duration: 0.6s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 .required {
-  animation-name: shake;
-  animation-duration: 0.6s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
